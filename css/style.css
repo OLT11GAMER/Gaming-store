@@ -1,5 +1,5 @@
-:root{
-    --shd: 4.23px 9.06px 14px 6px rgba(6,5,6,0.41);
+:root {
+  --shd: 4.23px 9.06px 14px 6px rgba(6, 5, 6, 0.41);
 }
 
 * {
@@ -64,7 +64,7 @@ body {
   width: 600px;
   height: 400px;
   border-radius: 30px;
-  box-shadow: var(--shd,0 1px 4px rgba(0,0,0,.6));
+  box-shadow: var(--shd, 0 1px 4px rgba(0, 0, 0, 0.6));
   margin-top: -200px;
 }
 .card-title {
@@ -104,11 +104,159 @@ body {
 .card-btn:hover {
   background-color: #8858ed;
   color: white;
- border: 1px solid white;
+  border: 1px solid white;
 }
-.card-img{
-    border-radius: 30px;
-    margin-top: 60px;
-  box-shadow: var(--shd,0 1px 4px rgba(0,0,0,.6));
+.card-img {
+  border-radius: 30px;
+  margin-top: 40px;
+  box-shadow: var(--shd, 0 1px 4px rgba(0, 0, 0, 0.6));
+}
 
+.gaming-section {
+  background-color: #060506;
+  position: relative;
+  overflow: hidden;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+}
+.gaming-title {
+  color: white;
+  margin-top: 50px;
+  font-size: 40px;
+}
+.gaming-btn {
+  width: 120px;
+  height: 50px;
+  border-radius: 100px;
+  border: none;
+  color: #8858ed;
+  font-weight: bolder;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 50px;
+  margin-left: 500px;
+}
+.carousel-title {
+  color: white;
+}
+.price {
+  color: white;
+}
+.carousel-btn {
+  width: 160px;
+  height: 40px;
+  border-radius: 100px;
+  border: none;
+  color: white;
+  background-color: #8858ed;
+  font-weight: bolder;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+.gaming-section .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) -12px);
+  gap: 16px;
+  overflow: hidden;
+  margin-top: 100px;
+}
+.carousel .carousel-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 15px;
+  cursor: pointer;
+}
+.gaming-section i {
+  height: 100px;
+  width: 100px;
+  /* background: #fff; */
+  text-align: center;
+  color: white;
+  line-height: 50px;
+  cursor: pointer;
+  position: absolute;
+  top: 65%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+.gaming-section i:first-child {
+  left: -22px;
+}
+.gaming-section i:last-child {
+  right: -22px;
+}
+.category-section {
+  background-color: #232223;
+  width: 100%;
+  height: 100%;
+}
+.category-title {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+.categories {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 200px;
+}
+.categories h3 {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin-top: 22px;
+}
+.consoles img {
+  width: 400px;
+  height: 500px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.consoles img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+.sales-section {
+  width: 100%;
+  height: 100vh;
+  background-color: #060506;
+}
+.sales-section .card {
+  position: absolute;
+  margin-top: 100px;
+}
+
+.sales-images .card {
+  z-index: 1;
+}
+.sales-games img {
+  width: 400px;
+  height: 600px;
+  border-radius: 30px;
+  margin-top: 40px;
+  box-shadow: 2.27px 4.46px 15px 5px rgba(34,33,34,0.6);
+  float: right;
+}
+.sales-games .first {
+  z-index: -2;
+  margin-left: 200px;
+}
+.sales-games .second {
+  z-index: -3;
+  margin-left: -100px;
+  margin-top: 150px;
+}
+.sales-games .third {
+  margin-top: 100px;
+  margin-left: -100px;
+  /* z-index: 2; */
 }
