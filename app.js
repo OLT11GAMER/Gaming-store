@@ -13,14 +13,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
 let database = require('./database');
 database.sync();
-let bcrypt = require('bcrypt');
 let modeli = require('./userModel');
-app.get('/', (req, res) => {
-    res.render("regjistrohu.ejs");
+let bcrypt = require('bcrypt');
+
+app.get('/register', (req, res) => {
+    res.render("register.ejs");
 })
 app.post(
-    '/regjistroUser', (req, res) => {
-        if(reg.body.password == reg.body.confirmPw){
+    '/register', (req, res) => {
+        if(req.body.password == req.body.confirmPassword){
             // insertoi te dhenat ne databaze
             let passwordiEnkriptuar = bcrypt.hashSync(req.body.password, 6)
             console.log(`passworDI JUAJ : ${passwordiEnkriptuar} ..... ESHTE ENKRIPTUAR`)
@@ -30,6 +31,7 @@ app.post(
             }).save().then(
                 ()=>{res.send('te dhenat u insertuan')})
                 .catch((err)=>{res.send(err)})
+                .then(res.render("index.html"))
             // res.send("passwordaat jane okej");
         } else {
             res.send("passwordat jane gabim");

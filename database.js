@@ -1,6 +1,6 @@
 let sequelize = require("sequelize");
 let database = new sequelize(
-    'finder',
+    'gamingstore',
     'root','',
  {
     host: 'localhost',
