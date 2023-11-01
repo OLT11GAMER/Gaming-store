@@ -1,15 +1,20 @@
-let express = require('express')
+let express = require('express');
 let app = express();
-let bodyParser = require('body-parser')
-let mysql = require('mysql2')
-app.use('/static', express.static('static'))
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
-app.set('view engine', 'ejs')
-let database = require('./database')
-database.sync()
-let bcrypt = require('bcrypt')
-let modeli = require('./userModel')
+let mysql = require('mysql2');
+
+const bodyParser = require('body-parser');
+
+// Parse form data
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use('/static', express.static('static'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.set('view engine', 'ejs');
+let database = require('./database');
+database.sync();
+let bcrypt = require('bcrypt');
+let modeli = require('./userModel');
 app.get('/', (req, res) => {
     res.render("regjistrohu.ejs");
 })
@@ -31,4 +36,24 @@ app.post(
         }
     }
 )
+
+// Create a simple route for the login page
+app.get('/login', (req, res) => {
+  res.render('login');
+});
+// Handle the login form submission
+app.post('/login', (req, res) => {
+  const username = req.body.username;
+  const password = req.body.password;
+
+  // Check the username and password (you can implement your authentication logic here)
+
+  if (username === 'yourusername' && password === 'yourpassword') {
+    // Successful login, you can redirect to another page or perform further actions
+    res.send('Login successful');
+  } else {
+    res.send('Login failed');
+  }
+});
+
 app.listen(8081);
