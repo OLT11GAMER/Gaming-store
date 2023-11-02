@@ -27,11 +27,12 @@ app.post(
             console.log(`passworDI JUAJ : ${passwordiEnkriptuar} ..... ESHTE ENKRIPTUAR`)
             modeli.build({
                 username: req.body.username,
+                email: req.body.email,
                 password: passwordiEnkriptuar 
             }).save().then(
                 ()=>{res.send('te dhenat u insertuan')})
                 .catch((err)=>{res.send(err)})
-                .then(res.render("index.html"))
+                .then(res.render("index"))
             // res.send("passwordaat jane okej");
         } else {
             res.send("passwordat jane gabim");
