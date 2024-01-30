@@ -1,23 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="views/css/style.css">
+  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/views/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer">
+
+<style>
+  img{
+    display: flex;
+  }
+  .nav-container{
+    display: flex;
+    flex-direction: row;
+  }
+       
+ul{
+  display: flex;
+  flex-direction: row;gap: 1rem;
+
+}
+li{
+  padding: 1rem;
+  
+  
+  list-style: none;
+
+}.kal:hover{
+  padding: 1rem;
+  
+  background-color: rgb(67, 67, 67);
+  
+  list-style: none;
+
+}
+a{color: aliceblue;
+font-style: none;
+text-decoration: none;}
+        h1 {
+            color: #8e44ad; /* Purple */
+            text-align: center;
+            text-shadow: 2px 2px 4px #313131;
+        }
+
+        
+
+        label {
+            color: #8e44ad; /* Purple */
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #8e44ad; /* Purple */
+            border-radius: 4px;
+            background-color: #1a1a1a; /* Dark Gray */
+            color: #fff;
+        }
+
+        input[type="submit"] {
+            background-color: #8e44ad; /* Purple */
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0 0 10px #8e44ad; /* Purple Glow */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #6c3483; /* Darker Purple */
+        }
+</style>
+</head>
+<body>
+  <div class="container">
+    
     <div class="nav-container">
       <div class="logo-container">
         <svg
@@ -53,30 +122,22 @@
         </svg>
         <h1 class="logo-title">ARCADE</h1>
       </div>
-      <ul class="nav-links">
-        <li><a href="">Products</a></li>
-        <li><a href="">On Sale</a></li>
-        <li><a href="">Contact Us</a></li>
-        <li>
-          <a href="views/login.html"> <i class="fa-solid fa-user"></i> Log In</a>
-        </li>
-      </ul>
+      <div class="nav-conatiner">
+        <ul>
+          <li class="kal"><a href="index">HOME</a></li>
+          <li class="kal"><a href="index">CONTACT</a></li>
+          
+          <li><form action="/login" method="GET" ><input type="submit" value="Login"></form></li>
+          <li><form action="/Register" method="GET" ><input type="submit" value="Register"></form></li>
+        </ul>
+      </div>
     </div>
 
     <div class="body-container">
-      <img class="bgImg" src="css/img/background.png" alt="" />
-      <div class="card">
-        <h3 class="card-title">Power up your game</h3>
-        <h1 class="card-desc">
-          Cyber kid <br />
-          infinite
-        </h1>
-        <p class="card-paragraph">Now Available on Pc & Console</p>
-
-        <button class="card-btn">Buy Now</button>
-      </div>
+      <img class="bgImg" src="views/css/img/background.png" alt="" />
+      
       <div class="imgCard">
-        <img class="card-img" src="css/img/imgCard.png" alt="" />
+        <img class="card-img" src="views/css/img/imgCard.png" alt="" />
       </div>
     </div>
 
@@ -89,25 +150,25 @@
 
       <ul class="carousel">
         <li class="carousel-card">
-          <div class="img"><img src="css/img/card-first.png" alt="img" /></div>
+          <div class="img"><img src="views/css/img/card-first.png" alt="img" /></div>
           <h2 class="carousel-title">Wave Gen Rx</h2>
           <p class="price">$579.99</p>
           <button class="carousel-btn">Add to Cart</button>
         </li>
         <li class="carousel-card">
-          <div class="img"><img src="css/img/mouse.png" alt="img" /></div>
+          <div class="img"><img src="views/css/img/mouse.png" alt="img" /></div>
           <h2 class="carousel-title">Wave Gen Rx</h2>
           <p class="price">$579.99</p>
           <button class="carousel-btn">Add to Cart</button>
         </li>
         <li class="carousel-card">
-          <div class="img"><img src="css/img/game.png" alt="img" /></div>
+          <div class="img"><img src="views/css/img/game.png" alt="img" /></div>
           <h2 class="carousel-title">Wave Gen Rx</h2>
           <p class="price">$579.99</p>
           <button class="carousel-btn">Add to Cart</button>
         </li>
         <li class="carousel-card">
-          <div class="img"><img src="css/img/game2.png" alt="img" /></div>
+          <div class="img"><img src="views/css/img/game2.png" alt="img" /></div>
           <h2 class="carousel-title">Wave Gen Rx</h2>
           <p class="price">$579.99</p>
           <button class="carousel-btn">Add to Cart</button>
@@ -120,15 +181,15 @@
       <h1 class="category-title">Shop by Category</h1>
       <div class="categories">
         <div class="consoles">
-          <img src="css/img/console.png" alt="Card Image" />
+          <img src="views/css/img/console.png" alt="Card Image" />
           <h3>Consoles</h3>
         </div>
         <div class="consoles">
-          <img src="css/img/accessories.png" alt="Card Image" />
+          <img src="views/css/img/accessories.png" alt="Card Image" />
           <h3>Accessories</h3>
         </div>
         <div class="consoles">
-          <img src="css/img/controller.png" alt="Card Image" />
+          <img src="views/css/img/controller.png" alt="Card Image" />
           <h3>Controllers</h3>
         </div>
       </div>
@@ -136,22 +197,19 @@
 
     <div class="sales-section">
       <div class="sales-images">
-        <div class="card">
-          <h3 class="card-title">This week's deals/h3>
-          <h1 class="card-desc">
-            10% <br />
-            of all games
-          </h1>
-          <button class="card-btn">Shop Now</button>
-        </div>
+        
         <div class="sales-games">
-          <img class="third"src="css/img/Chronosplit.png" alt=""> 
-          <img class="second"src="css/img/Dead at Last.png" alt="">
-          <img class="first"  src="css/img/Kira.png" alt="">
+          <img class="third"src="views/css/img/Chronosplit.png" alt=""> 
+          <img class="second"src="views/css/img/Dead at Last.png" alt="">
+          <img class="first"  src="views/css/img/Kira.png" alt="">
         </div>
       </div>
     </div>
 
     <script src="script.js"></script>
-  </body>
+
+  </div>
+
+
+</body>
 </html>

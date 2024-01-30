@@ -1,28 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        .password-do-not-match{
+            display: none;
+            color: red ;
+        }
+        body {
+            background-color: #1a1a1a; /* Dark Gray */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #8e44ad; /* Purple */
+            text-align: center;
+            text-shadow: 2px 2px 4px #313131;
+        }
+
+        form {
+            background-color: #333; /* Dark Gray */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 1rem;
+        }
+
+        label {
+            color: #8e44ad; /* Purple */
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #8e44ad; /* Purple */
+            border-radius: 4px;
+            background-color: #1a1a1a; /* Dark Gray */
+            color: #fff;
+        }
+
+        input[type="submit"] {
+            background-color: #8e44ad; /* Purple */
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0 0 10px #8e44ad; /* Purple Glow */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #6c3483; /* Darker Purple */
+        }
+    </style>
 </head>
 <body>
-    <h1>User Registration</h1>
+  
+ 
     <form action="/register" method="POST">
+        <h1>Register</h1>
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
         <br>
-        
+
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
         <br>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="password" name="password" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required>
         <br>
 
         <label for="confirmPassword">Confirm Password:</label>
         <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <!-- <p class="passwords-do-not-match">Passwords do not match</p> -->
         <br>
 
         <input type="submit" value="Register">
+
+    </form>
+    <form action="/login" method="GET">
+        <input type="submit" value="Login">
     </form>
 </body>
 </html>
+
